@@ -1,0 +1,113 @@
+@charset "UTF-8";
+div:empty, span:empty, h1:empty, a:empty{display:block;}
+.jushar_slider_4_dev {display: flex;  justify-content: center;  align-items: center;  height: 100vh;  overflow: hidden;  }
+.jushar_slider_4_dev * {  box-sizing: border-box;}
+.jushar_slider_4_dev .btn {  position: absolute;  z-index: 8;  width: 30px;  height: 30px;  left: calc(50% - 15px);  top: calc(50% - 15px);  margin-top: 250px;  transition: 0.2s ease-in-out;  margin-left: 350px;}
+.jushar_slider_4_dev input[type=radio] {  position: absolute;  z-index: 8;  width: 80px;  height: 80px;  left: calc(50% - 40px);  top: calc(50% - 40px);  margin-top: 250px;  margin-left: 350px;}
+.jushar_slider_4_dev input[type=radio]:hover ~ .btn {box-shadow: 0 0 0 1px #000;}
+.jushar_slider_4_dev input[type=radio]:hover ~ .btn:before { border-top: 2px solid #000;  border-right: 2px solid #000;}
+.jushar_slider_4_dev .btn {  box-shadow: 0 0 0 1px #fff;  z-index: 999;  pointer-events: none;  border-radius: 100%;}
+.jushar_slider_4_dev .btn:before {content: "";  position: absolute;  width: 25%;  height: 25%;  border-top: 2px solid #fff;  border-right: 2px solid #fff;  left: 50%;  top: 50%;  transform: translateY(calc(-50% - 2.5px)) translateX(-50%) rotate(135deg);  transition: 0.2s ease-in-out;}
+.jushar_slider_4_dev input {  opacity: 0;  z-index: 999;}
+.jushar_slider_4_dev input:first-of-type:checked ~ #wrap:after {  transition: 0s;}
+.jushar_slider_4_dev input:first-of-type:checked ~ #wrap .slide:nth-of-type(2) {  opacity: 0;}
+.jushar_slider_4_dev input:first-of-type:checked ~ #wrap .slide:nth-of-type(3):before{  transform-origin: top;}
+.jushar_slider_4_dev input:last-of-type:checked {  z-index: 0;}
+.jushar_slider_4_dev input:last-of-type:checked ~ .btn:before {  transform: translateY(calc(-50% + 1.5px)) translateX(-50%) rotate(135deg) scaleX(-1) scaleY(-1);}
+.jushar_slider_4_dev input:last-of-type:checked ~ #wrap .slide:nth-of-type(1):before{  transform: translateY(0);}
+.jushar_slider_4_dev input:last-of-type:checked ~ #wrap .slide:nth-of-type(1) .image { transform: translateX(-50%) translateY(calc(-50% + 100vh));}
+.jushar_slider_4_dev input:nth-of-type(1) {  z-index: 9;}
+.jushar_slider_4_dev input:nth-of-type(1):checked {  pointer-events: none;  opacity: 0;}
+.jushar_slider_4_dev input:nth-of-type(1):checked + input {  z-index: 20;}
+.jushar_slider_4_dev input:nth-of-type(1):checked ~ #wrap:after {  transform: translateY(0%);}
+.jushar_slider_4_dev input:nth-of-type(1):checked ~ #wrap .slide:nth-of-type(1) .js4_bu{-webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);  transition-delay: 0.3s;}
+.jushar_slider_4_dev input:nth-of-type(1):checked ~ #wrap .slide:nth-of-type(1) .content {  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);          clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);  transition-delay: 0.3s;}
+.jushar_slider_4_dev input:nth-of-type(1):checked ~ #wrap .slide:nth-of-type(1) .content p:before {  transform: translateY(0);  transition-delay: 0.45s;  opacity: 1;}
+.jushar_slider_4_dev input:nth-of-type(1):checked ~ #wrap .slide:nth-of-type(1) p.classifications {  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);          clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);  transition-delay: 0.2s;}
+.jushar_slider_4_dev input:nth-of-type(1):checked ~ #wrap .slide:nth-of-type(1) .image {  transition: all 600ms cubic-bezier(1, 0.885, 0.72, 1);  transition-delay: 0.1s;  transform: translateX(-50%) translateY(-50%);}
+.jushar_slider_4_dev input:nth-of-type(1):checked ~ #wrap .slide:nth-of-type(1):before {  transform: translateY(0);}
+.jushar_slider_4_dev input:nth-of-type(1):checked ~ #wrap .slide:nth-of-type(2) .content {  -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);          clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);}
+.jushar_slider_4_dev input:nth-of-type(1):checked ~ #wrap .slide:nth-of-type(2) p.classifications {  -webkit-clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);          clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);}
+.jushar_slider_4_dev input:nth-of-type(1):checked ~ #wrap .slide:nth-of-type(2) .image {  transform: translateX(-50%) translateY(calc(-50% + 100vh));}
+.jushar_slider_4_dev input:nth-of-type(1):checked ~ #wrap .slide:nth-of-type(0) .image {  transition: 0.3s ease-in-out;}
+.jushar_slider_4_dev input:nth-of-type(1):checked ~ #wrap .slide:nth-of-type(0):before {  transform: translateY(0);}
+.jushar_slider_4_dev input:first-of-type:checked ~ #wrap:after {  transition: 0s;}
+.jushar_slider_4_dev input:first-of-type:checked ~ #wrap .slide:nth-of-type(2) {  opacity: 0;}
+.jushar_slider_4_dev input:first-of-type:checked ~ #wrap .slide:nth-of-type(3):before{  transform-origin: top;}
+.jushar_slider_4_dev input:last-of-type:checked { z-index: 0;}
+.jushar_slider_4_dev input:last-of-type:checked ~ .btn:before { transform: translateY(calc(-50% + 1.5px)) translateX(-50%) rotate(135deg) scaleX(-1) scaleY(-1);}
+.jushar_slider_4_dev input:last-of-type:checked ~ #wrap .slide:nth-of-type(1):before{  transform: translateY(0);}
+.jushar_slider_4_dev input:last-of-type:checked ~ #wrap .slide:nth-of-type(1) .image { transform: translateX(-50%) translateY(calc(-50% + 100vh));}
+.jushar_slider_4_dev input:nth-of-type(2) {  z-index: 8;}
+.jushar_slider_4_dev input:nth-of-type(2):checked { pointer-events: none; opacity: 0;}
+.jushar_slider_4_dev input:nth-of-type(2):checked + input {  z-index: 20;}
+.jushar_slider_4_dev input:nth-of-type(2):checked ~ #wrap:after {  transform: translateY(25%);}
+.jushar_slider_4_dev input:nth-of-type(2):checked ~ #wrap .slide:nth-of-type(2) .js4_bu{-webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);  transition-delay: 0.3s;}
+.jushar_slider_4_dev input:nth-of-type(2):checked ~ #wrap .slide:nth-of-type(2) .content {  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%); clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);  transition-delay: 0.3s;}
+.jushar_slider_4_dev input:nth-of-type(2):checked ~ #wrap .slide:nth-of-type(2) .content p:before {transform: translateY(0);  transition-delay: 0.45s;  opacity: 1;}
+.jushar_slider_4_dev input:nth-of-type(2):checked ~ #wrap .slide:nth-of-type(2) p.classifications {-webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);          clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);  transition-delay: 0.2s;}
+.jushar_slider_4_dev input:nth-of-type(2):checked ~ #wrap .slide:nth-of-type(2) .image {transition: all 600ms cubic-bezier(1, 0.885, 0.72, 1);transition-delay: 0.1s;transform: translateX(-50%) translateY(-50%);}
+.jushar_slider_4_dev input:nth-of-type(2):checked ~ #wrap .slide:nth-of-type(2):before {transform: translateY(0);}
+.jushar_slider_4_dev input:nth-of-type(2):checked ~ #wrap .slide:nth-of-type(3) .content {-webkit-clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);}
+.jushar_slider_4_dev input:nth-of-type(2):checked ~ #wrap .slide:nth-of-type(3) p.classifications {-webkit-clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);}
+.jushar_slider_4_dev input:nth-of-type(2):checked ~ #wrap .slide:nth-of-type(3) .image {transform: translateX(-50%) translateY(calc(-50% + 100vh));}
+.jushar_slider_4_dev input:nth-of-type(2):checked ~ #wrap .slide:nth-of-type(1) .image {transition: 0.3s ease-in-out;}
+.jushar_slider_4_dev input:nth-of-type(2):checked ~ #wrap .slide:nth-of-type(1):before {transform: translateY(0);}
+.jushar_slider_4_dev input:first-of-type:checked ~ #wrap:after {transition: 0s;}
+.jushar_slider_4_dev input:first-of-type:checked ~ #wrap .slide:nth-of-type(2) {opacity: 0;}
+.jushar_slider_4_dev input:first-of-type:checked ~ #wrap .slide:nth-of-type(3):before{  transform-origin: top;}
+.jushar_slider_4_dev input:last-of-type:checked {  z-index: 0;}
+.jushar_slider_4_dev input:last-of-type:checked ~ .btn:before {transform: translateY(calc(-50% + 1.5px)) translateX(-50%) rotate(135deg) scaleX(-1) scaleY(-1);}
+.jushar_slider_4_dev input:last-of-type:checked ~ #wrap .slide:nth-of-type(1):before{  transform: translateY(0);}
+.jushar_slider_4_dev input:last-of-type:checked ~ #wrap .slide:nth-of-type(1) .image {  transform: translateX(-50%) translateY(calc(-50% + 100vh));}
+.jushar_slider_4_dev input:nth-of-type(3) {  z-index: 7;}
+.jushar_slider_4_dev input:nth-of-type(3):checked {  pointer-events: none;  opacity: 0;}
+.jushar_slider_4_dev input:nth-of-type(3):checked + input {  z-index: 20;}
+.jushar_slider_4_dev input:nth-of-type(3):checked ~ #wrap:after {  transform: translateY(50%);}
+.jushar_slider_4_dev input:nth-of-type(3):checked ~ #wrap .slide:nth-of-type(3) .js4_bu{-webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);  transition-delay: 0.3s;}
+.jushar_slider_4_dev input:nth-of-type(3):checked ~ #wrap .slide:nth-of-type(3) .content {  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%); clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);  transition-delay: 0.3s;}
+.jushar_slider_4_dev input:nth-of-type(3):checked ~ #wrap .slide:nth-of-type(3) .content p:before {  transform: translateY(0);  transition-delay: 0.45s;  opacity: 1;}
+.jushar_slider_4_dev input:nth-of-type(3):checked ~ #wrap .slide:nth-of-type(3) p.classifications {  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);          clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);  transition-delay: 0.2s;}
+.jushar_slider_4_dev input:nth-of-type(3):checked ~ #wrap .slide:nth-of-type(3) .image {  transition: all 600ms cubic-bezier(1, 0.885, 0.72, 1);  transition-delay: 0.1s;  transform: translateX(-50%) translateY(-50%);}
+.jushar_slider_4_dev input:nth-of-type(3):checked ~ #wrap .slide:nth-of-type(3):before {  transform: translateY(0);}
+.jushar_slider_4_dev input:nth-of-type(3):checked ~ #wrap .slide:nth-of-type(4) .content { -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%); clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);}
+.jushar_slider_4_dev input:nth-of-type(3):checked ~ #wrap .slide:nth-of-type(4) p.classifications {  -webkit-clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);          clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);}
+.jushar_slider_4_dev input:nth-of-type(3):checked ~ #wrap .slide:nth-of-type(4) .image {  transform: translateX(-50%) translateY(calc(-50% + 100vh));}
+.jushar_slider_4_dev input:nth-of-type(3):checked ~ #wrap .slide:nth-of-type(2) .image {  transition: 0.3s ease-in-out;}
+.jushar_slider_4_dev input:nth-of-type(3):checked ~ #wrap .slide:nth-of-type(2):before {  transform: translateY(0);}
+.jushar_slider_4_dev #wrap {min-width: 100%;  min-height: 100vh;  position: relative;  background: #fff;  box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.45);}
+.jushar_slider_4_dev #wrap input[type=checkbox] {  position: absolute;  z-index: 9;  opacity: 1;  width: 50%;  height: 50px;  bottom: 30%;  left: 50%;  opacity: 0;}
+.jushar_slider_4_dev #wrap input[type=checkbox]:checked {  pointer-events: all;  z-index: 9999;  bottom: 60%;  height: 40%;}
+.jushar_slider_4_dev #wrap input[type=checkbox]:checked ~ .slide .image {  width: 45%;  height: 45%;  transition-delay: 0.5s;}
+.jushar_slider_4_dev #wrap .outer {z-index: -1;  position: absolute;  width: 25%;  height: 50%;}
+.jushar_slider_4_dev #wrap .slide {position: absolute;  display: grid;  width: 100%;  height: 100%;  left: 0;  top: 0;  grid-template-columns: 25% 25% 50%;  grid-template-rows: 15% 85%;  z-index: 2;  overflow: hidden;}
+.jushar_slider_4_dev #wrap .slide:before {content: "";position: absolute;width: 50%;height: 100%;right: 0;top: 0;background: #f58286;z-index: -1;transform: translateY(100%);transform-origin: bottom;transition: all 600ms cubic-bezier(1, 0.885, 0.72, 1);}
+.jushar_slider_4_dev #wrap .slide .image {position: absolute;width: 47.5%;height: 47.5%;background-size: contain;background-repeat: no-repeat;background-position: center;left: 50%;top: 50%;transform: translateX(-50%) translateY(-100vw);will-change: transform;}
+.jushar_slider_4_dev #wrap label {color: #fff;-webkit-text-stroke: 0.75px rgb(0 0 0);font-size: 240px;font-weight: 900;position: absolute;margin: 0;width: 50%;left: 50%;transform: translateX(-50%);bottom: 0;text-align: center;width: 100%;opacity: 0.1;}
+.jushar_slider_4_dev #wrap .content {position: absolute;width: 50%;height: auto;right: 0%;transform: translateY(calc(-50% - 25px));top: 50%;-webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);transition: -webkit-clip-path 0.6s ease-in-out;transition: clip-path 0.6s ease-in-out;transition: clip-path 0.6s ease-in-out, -webkit-clip-path 0.6s ease-in-out;padding: 0 75px 100px 100px;}
+.jushar_slider_4_dev #wrap .content p {color: #fff;float: right;text-align: left;opacity: 1;width: auto;font-size: 14px;line-height: 2;position: relative;}
+.jushar_slider_4_dev #wrap .content p span:after {display: inline-block;clear: left;margin-left: 5px;}
+.jushar_slider_4_dev #wrap .content h1 {display: inline-block;text-align: left;width: auto;font-size: 36px;}
+.jushar_slider_4_dev #wrap .content h1:before {content: "";display: block;text-align: center;max-width: 100%;color: #fff;}
+.jushar_slider_4_dev #wrap p.classifications {position: absolute;left: 17.5%;top: 25%;-webkit-clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);transition: -webkit-clip-path 0.3s ease-in-out;transition: clip-path 0.3s ease-in-out;transition: clip-path 0.3s ease-in-out, -webkit-clip-path 0.3s ease-in-out;}
+.jushar_slider_4_dev #wrap p {font-size: 16px;margin: 0;line-height: 1.6;opacity: 0.35;}
+.jushar_slider_4_dev #wrap p span {display: block;clear: both;font-weight: 600;}
+.jushar_slider_4_dev #wrap p span:after {display: block;clear: both;font-weight: 300;margin-bottom: 10px;}
+@media (max-width: 1440px) {
+	.jushar_slider_4_dev #wrap label{font-size:200px;}
+}
+@media (max-width: 1200px) {
+	.jushar_slider_4_dev #wrap label{font-size:170px;}
+  	.jushar_slider_4_dev #wrap .content h1{font-size:32px;}
+}
+@media (max-width: 991px) {
+  .jushar_slider_4_dev{align-items:flex-start;height:600px}
+  .jushar_slider_4_dev #wrap{width: 100%;min-width: 100%;min-height: 600px;}
+  body .jushar_slider_4_dev input, body .jushar_slider_4_dev .btn{margin-top: 0 !important;margin-left: 0 !important;}
+  .jushar_slider_4_dev #wrap label{font-size:100px;}
+}
+@media (max-width: 600px) {
+  .jushar_slider_4_dev{align-items:flex-start;height:500px}
+  .jushar_slider_4_dev #wrap{width: 100%;min-width: 100%;min-height: 500px;}
+  .jushar_slider_4_dev #wrap label{font-size:75px;}
+}

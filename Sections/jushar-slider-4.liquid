@@ -1,0 +1,127 @@
+{{ 'jushar-slider-4.css' | asset_url | stylesheet_tag }}
+<div class="jushar_slider_4_dev">
+  <input checked='checked' id='rad1' name='rad' type='radio'>
+  <input id='rad2' name='rad' type='radio'>
+  <input id='rad3' name='rad' type='radio'>
+  <div class='btn'></div>
+  <div id='wrap'>
+    {% for block in section.blocks %}
+    <div class='slide'>
+      <div class='image'></div>
+      <div class='content'>
+        <h1></h1>
+        <p>
+          <span></span>
+        </p>
+      </div>
+      <label>Shopify Dev</label>
+      <p class='classifications'>
+        {% if block.settings.left_qya_1 != blank %}
+        	<span>{{ block.settings.left_qya_1 }}</span>
+        {% endif %}
+        {% if block.settings.left_qya_2 != blank %}
+        	<span>{{ block.settings.left_qya_2 }}</span>
+        {% endif %}
+      </p>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+<style>
+{% for block in section.blocks %}
+  .jushar_slider_4_dev #wrap .slide:nth-of-type({{ forloop.index }}) .image{background-image:url('{{ block.settings.s4_image | image_url }}');}
+  {% if block.settings.left_qya_1 != blank %}
+  .jushar_slider_4_dev #wrap .slide:nth-of-type({{ forloop.index }}) p.classifications span:first-of-type:after { content: "{{ block.settings.left_ans_1 }}";}
+  {% endif %}
+  {% if block.settings.left_qya_2 != blank %}
+  .jushar_slider_4_dev #wrap .slide:nth-of-type({{ forloop.index }}) p.classifications span:nth-of-type(2):after { content: "{{ block.settings.left_ans_2 }}";}
+  {% endif %}
+  {% if block.settings.slider_title != blank %}
+  .jushar_slider_4_dev #wrap .slide:nth-of-type({{ forloop.index }}) .content h1:before { content: "{{ block.settings.slider_title }}";}
+  {% endif %}
+  {% if block.settings.slider_desc != blank %}  
+    .jushar_slider_4_dev #wrap .slide:nth-of-type({{ forloop.index }}) .content p span:first-of-type:after { content: "{{ block.settings.slider_desc }}";}
+  {% endif %}
+
+{% endfor %}
+</style>
+
+{% schema %}
+  {
+    "name": "Jushar Slider 4",
+    "tag": "section",
+	"class": "section",
+	"max_blocks": 3,
+    "settings": [],
+	"blocks": [
+        {
+          "type": "column",
+          "name": "Jushar Slider 4",
+          "settings": [
+            {
+              "type": "image_picker",
+              "id": "s4_image",
+              "label": "Background image"
+            },
+			{
+              "type": "header",
+              "content": "Left Content"
+            },
+			{
+              "type": "text",
+              "id": "left_qya_1",
+              "label": "Left 1 Questions",
+			  "default": "Available Color"
+            },
+			{
+              "type": "text",
+              "id": "left_ans_1",
+              "label": "Left 1 Answers",
+			  "default": "Grey, Black, Blue"
+            },
+			{
+              "type": "text",
+              "id": "left_qya_2",
+              "label": "Left 2 Questions",
+			  "default": "Available Size"
+            },
+			{
+              "type": "text",
+              "id": "left_ans_2",
+              "label": "Left 2 Answers",
+			  "default": "50kg, 100kg, 150kg"
+            },
+		    {
+              "type": "header",
+              "content": "Right Content"
+            },
+			{
+              "type": "text",
+              "id": "slider_title",
+              "label": "Slider Title",
+			  "default": "Milk very pale pink undertones"
+            },
+			{
+              "type": "text",
+              "id": "slider_desc",
+              "label": "Slider Description",
+			  "default": "OLAPLEX No.5 Bond Maintenance Conditioner is a highly-moisturizing, reparative conditioner for all hair types that leaves hair easy to manage, shiny and healthier with each use. No.5 is color-safe, leaves hair stronger than ever, and benefits all hair types and textures."
+            }
+			
+          ]
+        }
+    ],
+	"presets": [
+      {
+        "name": "Jushar Slider 4"
+      }
+	]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
